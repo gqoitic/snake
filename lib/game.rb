@@ -1,7 +1,8 @@
 require 'io/console'
 class Game
   attr_reader :gameboard, :snake, :food
-  def initialize(max_x=11, max_y=11)
+
+  def initialize(max_x, max_y)
     @gameboard = Board.new(max_x, max_y)
     @snake = Snake.new(gameboard.width, gameboard.length)
     @food = Food.new(gameboard.width, gameboard.length)
